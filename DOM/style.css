@@ -1,0 +1,135 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #EFE9F4;
+    margin: 0;
+}
+
+
+div {
+    /* background-color: yellow; */
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* */
+}
+
+.topAdd {
+    background-color: #171D1C;
+}
+
+
+
+div #form {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: "Merriweather", serif;
+    color: white;
+
+
+    #inputValue {
+        font-size: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid #a1a1a1;
+        padding: 5px;
+    }
+
+    #inputValue:focus {
+        outline: 0;
+    }
+
+    button {
+        height: 2rem;
+        width: 5rem;
+        background-color: #16BAC5;
+        border: 1px solid #b2faff;
+        margin-left: 20px;
+        font-size: 1rem;
+        border-radius: 7px;
+        transition-delay: 100ms;
+
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: rgb(198, 255, 198);
+        font-size: 1.1rem;
+    }
+}
+
+ul {
+    padding: 0;
+
+    li {
+        font-size: 1.3rem;
+        background-color: #5fbef96b;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* color: #171D1C; */
+        padding: 1rem 1rem;
+        border-radius: 0px 12px 12px 0px;
+        margin: 2px;
+        overflow-wrap: anywhere;
+    }
+
+    .task-content {
+        flex: 1;
+        margin-right: 1rem;
+    }
+
+    .task-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .edit-input {
+        width: 100%;
+        max-width: 30rem;
+        font-size: 1.1rem;
+        padding: 0.35rem 0.5rem;
+        border: 1px solid #6f6f6f;
+        border-radius: 8px;
+    }
+
+    /* button {
+        background-color: red;
+        margin-left: 3rem;
+        padding: 0.3rem 0.6rem;
+        border-radius: 2px;
+        border: 1px solid black;
+        font-size: 1rem;
+
+    } */
+
+    .todo-save,
+    .todo-cancel {
+        margin-left: 0;
+        border-radius: 6px;
+        border: 1px solid #2a2a2a;
+        font-size: 0.95rem;
+        padding: 0.35rem 0.7rem;
+    }
+
+    .todo-save {
+        background-color: #16BAC5;
+        border-color: #129ba3;
+    }
+
+    .todo-cancel {
+        background-color: #ececec;
+    }
+
+    .material-symbols-outlined {
+        color: red;
+    }
+
+    span:hover {
+        cursor: pointer;
+    }
+}
