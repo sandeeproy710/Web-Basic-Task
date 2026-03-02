@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hostel Management System</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="page-top">
+      <div class="container-wrap">
+        <h1>Hostel Management System</h1>
+        <p>Simple panel to manage residents and room records.</p>
+      </div>
+    </header>
+
+    <main class="page-body">
+      <div class="container-wrap">
+        <section class="top-grid">
+          <section class="panel panel-form" aria-labelledby="add-resident-title">
+            <div class="panel-head">
+              <h2 id="add-resident-title">Add Resident</h2>
+              <p>Fill details and assign a room.</p>
+            </div>
+
+            <form id="residentFormMain" class="simple-form">
+              <div class="form-row">
+                <div class="field-box">
+                  <label for="residentName">Name</label>
+                  <input
+                    type="text"
+                    id="residentName"
+                    name="residentName"
+                    placeholder="Enter full name"
+                    required
+                  />
+                </div>
+
+                <div class="field-box">
+                  <label for="residentAge">Age</label>
+                  <input
+                    type="number"
+                    id="residentAge"
+                    name="residentAge"
+                    min="0"
+                    placeholder="e.g. 21"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field-box">
+                  <label for="residentPhone">Phone</label>
+                  <input
+                    type="tel"
+                    id="residentPhone"
+                    name="residentPhone"
+                    placeholder="e.g. 9876543210"
+                    required
+                  />
+                </div>
+
+                <div class="field-box">
+                  <label for="roomPick">Room Number</label>
+                  <select id="roomPick" name="roomPick" required></select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field-box field-box-full">
+                  <label for="dateJoin">Check-in Date</label>
+                  <input type="date" id="dateJoin" name="dateJoin" required />
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="add-btn">Add Resident</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="panel panel-stats" aria-labelledby="stats-title">
+            <div class="panel-head">
+              <h2 id="stats-title">Room Statistics</h2>
+              <p>Current room status.</p>
+            </div>
+            <div id="roomStatsBox" class="simple-stats"></div>
+          </section>
+        </section>
+
+        <section class="panel panel-table" aria-labelledby="resident-list-title">
+          <div class="panel-head panel-head-row">
+            <div>
+              <h2 id="resident-list-title">Resident List</h2>
+              <p>Search, edit, and delete residents.</p>
+            </div>
+            <div class="search-wrap">
+              <input
+                type="text"
+                id="residentSearch"
+                placeholder="Search resident by name..."
+              />
+            </div>
+          </div>
+
+          <div class="table-box">
+            <div class="table-scroll-area">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Phone</th>
+                    <th>Room</th>
+                    <th>Check-in Date</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="residentRows"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Your main JS bundle -->
+    <script type="module" src="./dist/app.js"></script>
+  </body>
+</html>
